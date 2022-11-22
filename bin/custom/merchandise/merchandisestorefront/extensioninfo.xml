@@ -32,7 +32,7 @@
         <requires-extension name="captchaaddon"/>
         <requires-extension name="acceleratorstorefrontcommons"/>
         <requires-extension name="merchandisefacades"/>
-        <webmodule jspcompile="false" webroot="/merchandisestorefront"/>
+        <webmodule jspcompile="false" webroot="/store"/>
         <meta key="extgen-template-extension" value="true"/>
     </extension>
 </extensioninfo>
