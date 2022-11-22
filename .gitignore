@@ -1,0 +1,44 @@
+/bin/*
+!/bin/custom
+/data/
+/log/
+/roles/
+/temp/
+
+### Generated stuff ###
+classes/
+testclasses/
+gensrc/
+gencss/
+*.class
+*-testclasses.xml
+*-webtestclasses.xml
+*-hmctestclasses.xml
+*_bof.jar
+*hmc.jar
+**/web/webroot/*cockpit/
+**/_ui/responsive/common/js/
+**/_ui/responsive/*/css/style.css
+**/_ui/responsive/*/fonts/
+**/_ui/shared/js/*
+!**/_ui/shared/js/generatedVariables.js
+
+### Mac  ###
+.DS_Store
+
+### IntelliJ IDEA ###
+.idea/
+hybris4intellij.properties
+
+*.*~
+.*~
+.~*
+
+### Eclipse ###
+.settings/
+.metadata/
+.recommenders/
+eclipsebin/
+.springBeans
+.pmd
+ruleset.xml
