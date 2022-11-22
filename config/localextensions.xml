@@ -8,12 +8,12 @@
     <extension name='commerceservicesbackoffice' />
     <extension name='solrfacetsearchbackoffice' />
     <extension name='solrserver' />
-    <extension name='yacceleratorbackoffice' />
-    <extension name='yacceleratorinitialdata' />
-    <extension name='yacceleratorfulfilmentprocess' />
-    <extension name='yacceleratorstorefront' />
-    <extension name='ycommercewebservices' />
-    <extension name='ycommercewebservicestest' />
+<!--    <extension name='yacceleratorbackoffice' />-->
+<!--    <extension name='yacceleratorinitialdata' />-->
+<!--    <extension name='yacceleratorfulfilmentprocess' />-->
+<!--    <extension name='yacceleratorstorefront' />-->
+<!--    <extension name='ycommercewebservices' />-->
+<!--    <extension name='ycommercewebservicestest' />-->
     <extension name='electronicsstore' />
     <extension name='apparelstore' />
     <extension name='captchaaddon' />
@@ -95,5 +95,13 @@
     <extension name='merchandisingservices' />
     <extension name='merchandisingservicesbackoffice' />
     <extension name='merchandisingstorefrontsampledataaddon' />
+
+    <!-- custom -->
+    <extension name='merchandisebackoffice' />
+    <extension name='merchandisecore' />
+    <extension name='merchandisefacades' />
+    <extension name='merchandisestorefront' />
+    <extension name='merchandisefulfilmentprocess' />
+    <extension name='merchandiseinitialdata' />
   </extensions>
 </hybrisconfig>
