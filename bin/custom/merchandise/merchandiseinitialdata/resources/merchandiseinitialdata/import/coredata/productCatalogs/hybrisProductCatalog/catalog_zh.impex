@@ -4,9 +4,12 @@
 #
 # Import the Product Catalog and Classification Catalog
 #
+$prefix=hybris
+$productCatalog=$prefixProductCatalog
 
 # Language
 $lang=zh
 
 # Create Catalog
 UPDATE Catalog;id[unique=true];name[lang=$lang]
+;$productCatalog;"hybris Product Catalog"

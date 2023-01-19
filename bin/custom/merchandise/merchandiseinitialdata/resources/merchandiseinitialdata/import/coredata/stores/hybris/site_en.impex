@@ -8,5 +8,8 @@
 # Language
 $lang=en
 
+$siteUid=hybris
+
 # Create CMS Site
 UPDATE CMSSite;uid[unique=true];name[lang=$lang];locale[lang=$lang]
+;$siteUid;"hybris Site";en_US
