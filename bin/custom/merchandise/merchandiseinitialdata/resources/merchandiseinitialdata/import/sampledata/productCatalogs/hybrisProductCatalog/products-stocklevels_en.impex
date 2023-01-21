@@ -4,12 +4,16 @@
 # ImpEx for Importing Products Stock Levels and Warehouses
 # English localisation
 
+$vendor=hybris
+
 # Macros / Replacement Parameter definitions
 $lang=en
 
 # Update Vendor Name
 UPDATE Vendor;code[unique=true];name[lang=$lang]
+;$vendor;"Hybris"
 
 # Update Warehouses
 UPDATE Warehouse;code[unique=true];name[lang=$lang]
+;warehouse_c;"Warehouse C"
 

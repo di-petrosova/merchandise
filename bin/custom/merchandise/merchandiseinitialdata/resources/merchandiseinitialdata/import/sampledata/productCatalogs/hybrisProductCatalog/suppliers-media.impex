@@ -4,8 +4,9 @@
 # ImpEx for Importing Supplier Media
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
-$productCatalogName=__PRODUCT_CATALOG_FULL_NAME__
+$prefix=hybris
+$productCatalog=$prefixProductCatalog
+$productCatalogName=$prefix Product Catalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog:Staged]
 $thumbnail=thumbnail(code, $catalogVersion)
