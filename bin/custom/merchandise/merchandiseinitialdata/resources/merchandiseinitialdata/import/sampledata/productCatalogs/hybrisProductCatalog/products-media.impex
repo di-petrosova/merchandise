@@ -4,7 +4,9 @@
 # ImPex for Importing Product Media
 
 # Macros / Replacement Parameter definitions
-$productCatalog=__PRODUCT_CATALOG_NAME__
+$prefix=hybris
+$productCatalog=$prefixProductCatalog
+$productCatalogName=$prefix Product Catalog
 
 $catalogVersion=catalogversion(catalog(id[default=$productCatalog]),version[default='Staged'])[unique=true,default=$productCatalog]
 $media=@media[translator=de.hybris.platform.impex.jalo.media.MediaDataTranslator]
@@ -17,13 +19,114 @@ $others=others(code, $catalogVersion)
 $data_sheet=data_sheet(code, $catalogVersion)
 $medias=medias(code, $catalogVersion)
 $galleryImages=galleryImages(qualifier, $catalogVersion)
-$siteResource=jar:de.hybris.merchandise.initialdata.setup.InitialDataSystemSetup&/merchandiseinitialdata/import/productCatalogs/$productCatalog
+$siteResource=jar:de.hybris.merchandise.initialdata.setup.InitialDataSystemSetup&/merchandiseinitialdata/import/sampledata/productCatalogs/$productCatalog
 
 # Create Media
 INSERT_UPDATE Media;mediaFormat(qualifier);code[unique=true];$media;mime[default='image/jpeg'];$catalogVersion;folder(qualifier)
+;1200Wx1200H;/1200Wx1200H/hybris_merch_USB-Stick.jpg;$siteResource/images/1200Wx1200H/hybris-merch-usb-stick.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_Badge.jpg;$siteResource/images/1200Wx1200H/hybris-merch-badge.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_Block.jpg;$siteResource/images/1200Wx1200H/hybris-merch-block.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_Pen.jpg;$siteResource/images/1200Wx1200H/hybris-merch-pen.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_Cup.jpg;$siteResource/images/1200Wx1200H/hybris-merch-cup.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_Cup2.jpg;$siteResource/images/1200Wx1200H/hybris-merch-cup2.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_Wiesnherz.jpg;$siteResource/images/1200Wx1200H/hybris-merch-wiesnherz.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_hoodie_girls.jpg;$siteResource/images/1200Wx1200H/hybris-merch-hoodie-girls.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_hoodie_men.jpg;$siteResource/images/1200Wx1200H/hybris-merch-hoodie-men.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_tshirt_girls.jpg;$siteResource/images/1200Wx1200H/hybris-merch-tshirt-girls.jpg;;;images
+;1200Wx1200H;/1200Wx1200H/hybris_merch_tshirt_men.jpg;$siteResource/images/1200Wx1200H/hybris-merch-tshirt-men.jpg;;;images
+
+;515Wx515H;/515Wx515H/hybris_merch_USB-Stick.jpg;$siteResource/images/515Wx515H/hybris-merch-usb-stick.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_Badge.jpg;$siteResource/images/515Wx515H/hybris-merch-badge.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_Block.jpg;$siteResource/images/515Wx515H/hybris-merch-block.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_Pen.jpg;$siteResource/images/515Wx515H/hybris-merch-pen.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_Cup.jpg;$siteResource/images/515Wx515H/hybris-merch-cup.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_Cup2.jpg;$siteResource/images/515Wx515H/hybris-merch-cup2.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_Wiesnherz.jpg;$siteResource/images/515Wx515H/hybris-merch-wiesnherz.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_hoodie_girls.jpg;$siteResource/images/515Wx515H/hybris-merch-hoodie-girls.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_hoodie_men.jpg;$siteResource/images/515Wx515H/hybris-merch-hoodie-men.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_tshirt_girls.jpg;$siteResource/images/515Wx515H/hybris-merch-tshirt-girls.jpg;;;images
+;515Wx515H;/515Wx515H/hybris_merch_tshirt_men.jpg;$siteResource/images/515Wx515H/hybris-merch-tshirt-men.jpg;;;images
+
+;300Wx300H;/300Wx300H/hybris_merch_USB-Stick.jpg;$siteResource/images/300Wx300H/hybris-merch-usb-stick.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_Badge.jpg;$siteResource/images/300Wx300H/hybris-merch-badge.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_Block.jpg;$siteResource/images/300Wx300H/hybris-merch-block.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_Pen.jpg;$siteResource/images/300Wx300H/hybris-merch-pen.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_Cup.jpg;$siteResource/images/300Wx300H/hybris-merch-cup.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_Cup2.jpg;$siteResource/images/300Wx300H/hybris-merch-cup2.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_Wiesnherz.jpg;$siteResource/images/300Wx300H/hybris-merch-wiesnherz.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_hoodie_girls.jpg;$siteResource/images/300Wx300H/hybris-merch-hoodie-girls.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_hoodie_men.jpg;$siteResource/images/300Wx300H/hybris-merch-hoodie-men.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_tshirt_girls.jpg;$siteResource/images/300Wx300H/hybris-merch-tshirt-girls.jpg;;;images
+;300Wx300H;/300Wx300H/hybris_merch_tshirt_men.jpg;$siteResource/images/300Wx300H/hybris-merch-tshirt-men.jpg;;;images
+
+;96Wx96H;/96Wx96H/hybris_merch_USB-Stick.jpg;$siteResource/images/96Wx96H/hybris-merch-usb-stick.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_Badge.jpg;$siteResource/images/96Wx96H/hybris-merch-badge.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_Block.jpg;$siteResource/images/96Wx96H/hybris-merch-block.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_Pen.jpg;$siteResource/images/96Wx96H/hybris-merch-pen.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_Cup.jpg;$siteResource/images/96Wx96H/hybris-merch-cup.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_Cup2.jpg;$siteResource/images/96Wx96H/hybris-merch-cup2.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_Wiesnherz.jpg;$siteResource/images/96Wx96H/hybris-merch-wiesnherz.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_hoodie_girls.jpg;$siteResource/images/96Wx96H/hybris-merch-hoodie-girls.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_hoodie_men.jpg;$siteResource/images/96Wx96H/hybris-merch-hoodie-men.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_tshirt_girls.jpg;$siteResource/images/96Wx96H/hybris-merch-tshirt-girls.jpg;;;images
+;96Wx96H;/96Wx96H/hybris_merch_tshirt_men.jpg;$siteResource/images/96Wx96H/hybris-merch-tshirt-men.jpg;;;images
+
+;65Wx65H;/65Wx65H/hybris_merch_USB-Stick.jpg;$siteResource/images/65Wx65H/hybris-merch-usb-stick.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_Badge.jpg;$siteResource/images/65Wx65H/hybris-merch-badge.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_Block.jpg;$siteResource/images/65Wx65H/hybris-merch-block.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_Pen.jpg;$siteResource/images/65Wx65H/hybris-merch-pen.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_Cup.jpg;$siteResource/images/65Wx65H/hybris-merch-cup.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_Cup2.jpg;$siteResource/images/65Wx65H/hybris-merch-cup2.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_Wiesnherz.jpg;$siteResource/images/65Wx65H/hybris-merch-wiesnherz.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_hoodie_girls.jpg;$siteResource/images/65Wx65H/hybris-merch-hoodie-girls.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_hoodie_men.jpg;$siteResource/images/65Wx65H/hybris-merch-hoodie-men.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_tshirt_girls.jpg;$siteResource/images/65Wx65H/hybris-merch-tshirt-girls.jpg;;;images
+;65Wx65H;/65Wx65H/hybris_merch_tshirt_men.jpg;$siteResource/images/65Wx65H/hybris-merch-tshirt-men.jpg;;;images
+
+;30Wx30H;/30Wx30H/hybris_merch_USB-Stick.jpg;$siteResource/images/30Wx30H/hybris-merch-usb-stick.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_Badge.jpg;$siteResource/images/30Wx30H/hybris-merch-badge.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_Block.jpg;$siteResource/images/30Wx30H/hybris-merch-block.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_Pen.jpg;$siteResource/images/30Wx30H/hybris-merch-pen.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_Cup.jpg;$siteResource/images/30Wx30H/hybris-merch-cup.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_Cup2.jpg;$siteResource/images/30Wx30H/hybris-merch-cup2.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_Wiesnherz.jpg;$siteResource/images/30Wx30H/hybris-merch-wiesnherz.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_hoodie_girls.jpg;$siteResource/images/30Wx30H/hybris-merch-hoodie-girls.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_hoodie_men.jpg;$siteResource/images/30Wx30H/hybris-merch-hoodie-men.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_tshirt_girls.jpg;$siteResource/images/30Wx30H/hybris-merch-tshirt-girls.jpg;;;images
+;30Wx30H;/30Wx30H/hybris_merch_tshirt_men.jpg;$siteResource/images/30Wx30H/hybris-merch-tshirt-men.jpg;;;images
 
 # Create Media Containers
 INSERT_UPDATE MediaContainer;qualifier[unique=true];$medias;$catalogVersion
+;0001_1.jpg;/1200Wx1200H/hybris_merch_Cup.jpg,/515Wx515H/hybris_merch_Cup.jpg,/300Wx300H/hybris_merch_Cup.jpg,/96Wx96H/hybris_merch_Cup.jpg,/65Wx65H/hybris_merch_Cup.jpg,/30Wx30H/hybris_merch_Cup.jpg
+;0001_2.jpg;/1200Wx1200H/hybris_merch_Cup2.jpg,/515Wx515H/hybris_merch_Cup2.jpg,/300Wx300H/hybris_merch_Cup2.jpg,/96Wx96H/hybris_merch_Cup2.jpg,/65Wx65H/hybris_merch_Cup2.jpg,/30Wx30H/hybris_merch_Cup2.jpg
+;0002_1.jpg;/1200Wx1200H/hybris_merch_Pen.jpg,/515Wx515H/hybris_merch_Pen.jpg,/300Wx300H/hybris_merch_Pen.jpg,/96Wx96H/hybris_merch_Pen.jpg,/65Wx65H/hybris_merch_Pen.jpg,/30Wx30H/hybris_merch_Pen.jpg
+;0003_1.jpg;/1200Wx1200H/hybris_merch_Block.jpg,/515Wx515H/hybris_merch_Block.jpg,/300Wx300H/hybris_merch_Block.jpg,/96Wx96H/hybris_merch_Block.jpg,/65Wx65H/hybris_merch_Block.jpg,/30Wx30H/hybris_merch_Block.jpg
+;0005_1.jpg;/1200Wx1200H/hybris_merch_Badge.jpg,/515Wx515H/hybris_merch_Badge.jpg,/300Wx300H/hybris_merch_Badge.jpg,/96Wx96H/hybris_merch_Badge.jpg,/65Wx65H/hybris_merch_Badge.jpg,/30Wx30H/hybris_merch_Badge.jpg
+;0006_1.jpg;/1200Wx1200H/hybris_merch_USB-Stick.jpg,/515Wx515H/hybris_merch_USB-Stick.jpg,/300Wx300H/hybris_merch_USB-Stick.jpg,/96Wx96H/hybris_merch_USB-Stick.jpg,/65Wx65H/hybris_merch_USB-Stick.jpg,/30Wx30H/hybris_merch_USB-Stick.jpg
+;0007_1.jpg;/1200Wx1200H/hybris_merch_Wiesnherz.jpg,/515Wx515H/hybris_merch_Wiesnherz.jpg,/300Wx300H/hybris_merch_Wiesnherz.jpg,/96Wx96H/hybris_merch_Wiesnherz.jpg,/65Wx65H/hybris_merch_Wiesnherz.jpg,/30Wx30H/hybris_merch_Wiesnherz.jpg
+;0100_1.jpg;/1200Wx1200H/hybris_merch_tshirt_men.jpg,/515Wx515H/hybris_merch_tshirt_men.jpg,/300Wx300H/hybris_merch_tshirt_men.jpg,/96Wx96H/hybris_merch_tshirt_men.jpg,/65Wx65H/hybris_merch_tshirt_men.jpg,/30Wx30H/hybris_merch_tshirt_men.jpg
+;0110_1.jpg;/1200Wx1200H/hybris_merch_tshirt_girls.jpg,/515Wx515H/hybris_merch_tshirt_girls.jpg,/300Wx300H/hybris_merch_tshirt_girls.jpg,/96Wx96H/hybris_merch_tshirt_girls.jpg,/65Wx65H/hybris_merch_tshirt_girls.jpg,/30Wx30H/hybris_merch_tshirt_girls.jpg
+;0200_1.jpg;/1200Wx1200H/hybris_merch_hoodie_men.jpg,/515Wx515H/hybris_merch_hoodie_men.jpg,/300Wx300H/hybris_merch_hoodie_men.jpg,/96Wx96H/hybris_merch_hoodie_men.jpg,/65Wx65H/hybris_merch_hoodie_men.jpg,/30Wx30H/hybris_merch_hoodie_men.jpg
+;0210_1.jpg;/1200Wx1200H/hybris_merch_hoodie_girls.jpg,/515Wx515H/hybris_merch_hoodie_girls.jpg,/300Wx300H/hybris_merch_hoodie_girls.jpg,/96Wx96H/hybris_merch_hoodie_girls.jpg,/65Wx65H/hybris_merch_hoodie_girls.jpg,/30Wx30H/hybris_merch_hoodie_girls.jpg
 
 # Update Products with Media and Media Containers
 UPDATE Product;code[unique=true];$picture;$thumbnail;$detail;$others;$normal;$thumbnails;$galleryImages;$catalogVersion
+;0001;/300Wx300H/hybris_merch_Cup.jpg;/96Wx96H/hybris_merch_Cup.jpg;;;;;0001_1.jpg,0001_2.jpg
+;0002;/300Wx300H/hybris_merch_Pen.jpg;/96Wx96H/hybris_merch_Pen.jpg;;;;;0002_1.jpg
+;0003;/300Wx300H/hybris_merch_Block.jpg;/96Wx96H/hybris_merch_Block.jpg;;;;;0003_1.jpg
+;0004;/300Wx300H/hybris_merch_Block.jpg;/96Wx96H/hybris_merch_Block.jpg;;;;;0003_1.jpg
+;0005;/300Wx300H/hybris_merch_Badge.jpg;/96Wx96H/hybris_merch_Badge.jpg;;;;;0005_1.jpg
+;0006;/300Wx300H/hybris_merch_USB-Stick.jpg;/96Wx96H/hybris_merch_USB-Stick.jpg;;;;;0006_1.jpg
+;0007;/300Wx300H/hybris_merch_Wiesnherz.jpg;/96Wx96H/hybris_merch_Wiesnherz.jpg;;;;;0007_1.jpg
+;0100;/300Wx300H/hybris_merch_tshirt_men.jpg;/96Wx96H/hybris_merch_tshirt_men.jpg;;;;;0100_1.jpg
+;0101;/300Wx300H/hybris_merch_tshirt_men.jpg;/96Wx96H/hybris_merch_tshirt_men.jpg;;;;;0100_1.jpg
+;0102;/300Wx300H/hybris_merch_tshirt_men.jpg;/96Wx96H/hybris_merch_tshirt_men.jpg;;;;;0100_1.jpg
+;0110;/300Wx300H/hybris_merch_tshirt_girls.jpg;/96Wx96H/hybris_merch_tshirt_girls.jpg;;;;;0110_1.jpg
+;0111;/300Wx300H/hybris_merch_tshirt_girls.jpg;/96Wx96H/hybris_merch_tshirt_girls.jpg;;;;;0110_1.jpg
+;0112;/300Wx300H/hybris_merch_tshirt_girls.jpg;/96Wx96H/hybris_merch_tshirt_girls.jpg;;;;;0110_1.jpg
+;0200;/300Wx300H/hybris_merch_hoodie_men.jpg;/96Wx96H/hybris_merch_hoodie_men.jpg;;;;;0200_1.jpg
+;0201;/300Wx300H/hybris_merch_hoodie_men.jpg;/96Wx96H/hybris_merch_hoodie_men.jpg;;;;;0200_1.jpg
+;0202;/300Wx300H/hybris_merch_hoodie_men.jpg;/96Wx96H/hybris_merch_hoodie_men.jpg;;;;;0200_1.jpg
+;0210;/300Wx300H/hybris_merch_hoodie_girls.jpg;/96Wx96H/hybris_merch_hoodie_girls.jpg;;;;;0210_1.jpg
+;0211;/300Wx300H/hybris_merch_hoodie_girls.jpg;/96Wx96H/hybris_merch_hoodie_girls.jpg;;;;;0210_1.jpg
+;0212;/300Wx300H/hybris_merch_hoodie_girls.jpg;/96Wx96H/hybris_merch_hoodie_girls.jpg;;;;;0210_1.jpg
