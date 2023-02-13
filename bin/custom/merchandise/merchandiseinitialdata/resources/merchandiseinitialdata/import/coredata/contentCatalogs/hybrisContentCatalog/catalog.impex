@@ -16,3 +16,7 @@ INSERT_UPDATE ContentCatalog;id[unique=true]
 INSERT_UPDATE CatalogVersion;catalog(id)[unique=true];version[unique=true];active;languages(isoCode)
 ;$contentCatalog;Staged;false;$languages
 ;$contentCatalog;Online;true;$languages
+
+UPDATE CatalogVersion;catalog(id)[unique=true];version[unique=true];writePrincipals(uid)
+; $contentCatalog ; Staged ; cmsmanagergroup,cmsmanager
+; $contentCatalog ; Online ; cmsmanagergroup,cmsmanager
