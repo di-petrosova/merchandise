@@ -6,33 +6,44 @@
 /temp/
 
 ### Generated stuff ###
-classes/
-testclasses/
 gensrc/
 gencss/
+classes/
 *.class
-*-testclasses.xml
-*-webtestclasses.xml
-*-hmctestclasses.xml
+testclasses/
+*testclasses.xml
+extensioninfo.xsd
+beans.xsd
+items.xsd
 *_bof.jar
-*hmc.jar
-**/web/webroot/*cockpit/
-**/_ui/responsive/common/js/
-**/_ui/responsive/*/css/style.css
-**/_ui/responsive/*/fonts/
-**/_ui/shared/js/*
-!**/_ui/shared/js/generatedVariables.js
+build.xml
+platformhome.properties
 
-### Mac  ###
-.DS_Store
+### Addon specific ###
+**/web/addonsrc/
+**/web/addontestsrc/
+**/web/commonwebsrc/
+**/web/webroot/*cockpit/
+**/web/webroot/_ui/addons/
+**/web/webroot/WEB-INF/views/addons/
+**/web/webroot/WEB-INF/tags/addons/
+**/web/webroot/WEB-INF/tld/addons/
+**/web/webroot/WEB-INF/messages/addons/
+**/web/webroot/WEB-INF/_ui-src/addons/
+
+# source: wro_addons_template.xml
+wro_addons.xml
+
+# source: /web/webroot/WEB-INF/_ui-src/shared/js/analyticsmediator.js
+**/web/webroot/_ui/shared/js/analyticsmediator.js
 
 ### IntelliJ IDEA ###
 .idea/
+.idea_modules/
+idea-module-files/
+*.iml
+*.eml
 hybris4intellij.properties
-
-*.*~
-.*~
-.~*
 
 ### Eclipse ###
 .settings/
@@ -42,3 +53,16 @@ eclipsebin/
 .springBeans
 .pmd
 ruleset.xml
+.externalToolBuilders/
+eclipsebin_backoffice/
+
+### Jrebel ###
+rebel.xml
+
+### Mac  ###
+.DS_Store
+
+### Other ###
+*.*~
+.*~
+.~*
