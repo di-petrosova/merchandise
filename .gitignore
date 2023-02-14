@@ -19,6 +19,7 @@ items.xsd
 build.xml
 platformhome.properties
 **/web/webroot/_ui/responsive/common/js
+**/web/webroot/_ui/responsive/theme-*/css/style.css
 
 ### Addon specific ###
 **/web/addonsrc/
@@ -37,6 +38,9 @@ wro_addons.xml
 
 # source: /web/webroot/WEB-INF/_ui-src/shared/js/analyticsmediator.js
 **/web/webroot/_ui/shared/js/analyticsmediator.js
+
+# source: taglib-*.jar
+**/web/webroot/WEB-INF/lib/addon-captchaaddon-json-taglib-*.jar
 
 ### IntelliJ IDEA ###
 .idea/
