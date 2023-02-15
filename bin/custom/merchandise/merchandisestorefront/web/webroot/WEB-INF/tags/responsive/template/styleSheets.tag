@@ -21,6 +21,10 @@
 	</c:otherwise>
 </c:choose>
 
+<%-- google webfonts --%>
+<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+<link href='${fn:escapeXml(themeResourcePath)}/css/changes.css' rel='stylesheet' type='text/css'>
+
 <%--  AddOn Theme CSS files --%>
 <c:forEach items="${addOnThemeCssPaths}" var="addOnThemeCss">
 	<link rel="stylesheet" type="text/css" media="all" href="${fn:escapeXml(addOnThemeCss)}"/>
