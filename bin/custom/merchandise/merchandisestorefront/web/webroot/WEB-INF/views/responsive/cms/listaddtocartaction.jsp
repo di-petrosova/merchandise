@@ -26,6 +26,11 @@
                             aria-disabled="true" disabled="disabled">
                     </button>
                 </c:when>
+                <c:when test="${product.internalOnly}">
+                    <button type="submit" class="btn btn-primary btn-block glyphicon glyphicon-shopping-cart"
+                            aria-disabled="true" disabled="disabled">
+                    </button>
+                </c:when>
                 <c:otherwise>
                     <button type="submit" class="btn btn-primary btn-block glyphicon glyphicon-shopping-cart js-enable-btn"
                             disabled="disabled">
@@ -39,6 +44,12 @@
         <c:if test="${product.configurable}">
             <c:choose>
                 <c:when test="${product.stock.stockLevelStatus.code eq 'outOfStock' }">
+                    <button id="configureProduct" type="button" class="btn btn-primary btn-block"
+                            disabled="disabled">
+                        <spring:theme code="basket.configure.product"/>
+                    </button>
+                </c:when>
+                <c:when test="${product.internalOnly}">
                     <button id="configureProduct" type="button" class="btn btn-primary btn-block"
                             disabled="disabled">
                         <spring:theme code="basket.configure.product"/>

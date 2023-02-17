@@ -26,6 +26,10 @@
 	<c:if test="${product.purchasable and product.stock.stockLevelStatus.code ne 'outOfStock' }">
 		<c:set var="buttonType">submit</c:set>
 	</c:if>
+	<c:if test="${product.internalOnly and !user.internal}">
+		<c:set var="buttonType">button</c:set>
+	</c:if>
+
 	<c:choose>
 		<c:when test="${fn:contains(buttonType, 'button')}">
 			<c:if test="${product.configurable}">
@@ -56,7 +60,16 @@
 	<c:if test="${product.purchasable and product.stock.stockLevelStatus.code ne 'outOfStock' }">
 		<c:set var="buttonType">submit</c:set>
 	</c:if>
+	<c:if test="${product.internalOnly and !user.internal}">
+		<c:set var="buttonType">button</c:set>
+	</c:if>
+
 	<c:choose>
+		<c:when test="${fn:contains(buttonType, 'button') and product.internalOnly and !user.internal}">
+			<button type="${buttonType}" class="btn btn-primary btn-block js-add-to-cart btn-icon glyphicon-shopping-cart outOfStock" disabled="disabled">
+				<spring:theme code="text.addToCart.unavailable"/>
+			</button>
+		</c:when>
 		<c:when test="${fn:contains(buttonType, 'button')}">
 			<button type="${buttonType}" class="btn btn-primary btn-block js-add-to-cart btn-icon glyphicon-shopping-cart outOfStock" disabled="disabled">
 				<spring:theme code="product.variants.out.of.stock"/>
