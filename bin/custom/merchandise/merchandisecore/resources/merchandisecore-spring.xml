@@ -561,4 +561,10 @@
 	<bean id="hybrisBrandCategoryNameValueProvider" parent="abstractCategoryNameValueProvider">
 		<property name="categorySource" ref="hybrisBrandCategorySource"/>
 	</bean>
+
+	<bean id="internalProductProvider"
+		  class="de.hybris.merchandise.core.search.solrfacetsearch.provider.impl.InternalProductProvider"/>
+
+	<bean id="internalProductResolver"
+		  class="de.hybris.merchandise.core.search.solrfacetsearch.resolver.InternalProductResolver"/>
 </beans>
