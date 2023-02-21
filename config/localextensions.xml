@@ -103,5 +103,6 @@
     <extension name='merchandisestorefront' />
     <extension name='merchandisefulfilmentprocess' />
     <extension name='merchandiseinitialdata' />
+    <extension name='merchandisecommerceservices' />
   </extensions>
 </hybrisconfig>
