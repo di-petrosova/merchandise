@@ -82,5 +82,10 @@
         <property name="mediaService" ref="mediaService"/>
         <property name="flexibleSearchService" ref="flexibleSearchService"/>
     </bean>
-			
+
+
+    <bean id="rangedAvgCustomerRatingProvider"
+          class="de.hybris.merchandise.search.providers.MerchandiseProductReviewAverageRatingValueProvider"
+          parent="productReviewAverageRatingValueProvider" />
+
 </beans>
