@@ -32,6 +32,7 @@
         <requires-extension name="captchaaddon"/>
         <requires-extension name="acceleratorstorefrontcommons"/>
         <requires-extension name="merchandisefacades"/>
+        <requires-extension name="randomimageaddon"/>
         <webmodule jspcompile="false" webroot="/store"/>
         <meta key="extgen-template-extension" value="true"/>
     </extension>

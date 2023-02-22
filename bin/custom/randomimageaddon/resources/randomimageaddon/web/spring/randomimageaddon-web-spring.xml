@@ -34,4 +34,10 @@
 		<property name="add" ref="getRandomimageaddonBeforeViewHandler"/>
 	</bean>
 
+	<bean id="randomImageParagraphComponentRenderer" parent="addOnJspIncludeCMSComponentRenderer" />
+
+	<bean id="randomImageParagraphComponentRendererMapping" parent="addonCmsComponentRendererMapping">
+		<property name="typeCode" value="RandomImageParagraphComponent" />
+		<property name="renderer" ref="randomImageParagraphComponentRenderer" />
+	</bean>
 </beans>
