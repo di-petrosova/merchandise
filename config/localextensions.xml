@@ -105,5 +105,6 @@
     <extension name='merchandiseinitialdata' />
     <extension name='merchandisecommerceservices' />
     <extension name="randomimageaddon"/>
+    <extension name="merchandisecheckoutaddon" />
   </extensions>
 </hybrisconfig>
